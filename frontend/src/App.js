@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
-import './App.css';
+import styles from './App.module.css';
 
 const SERVER_URL = 'http://localhost:4000';
 
@@ -55,13 +55,13 @@ function App() {
     };
 
     return (
-        <div className='main-container'>
-            <div className='heading'>
+        <div className={styles.mainContainer}>
+            <div className={styles.heading}>
                 <div>Multi Chat</div>
-                <div className='link-section'>
+                <div className={styles.linkSection}>
                     <a 
                         href="https://github.com/mr-jay-250/a-Real-Time-Chat-Application"
-                        className='hyper-link'
+                        className={styles.hyperLink}
                         target="_blank" 
                         rel="noreferrer"
                     >
@@ -69,15 +69,15 @@ function App() {
                     </a>
                 </div>
             </div>
-            <div className="chat-container">
+            <div className={styles.chatContainer}>
                 {messages.map((message, index) => (
-                    <div key={index} className={message.from === socket.id ? 'message-right' : 'message-left'}>
-                        <div className="message-text">{message.text}</div>
-                        <div className="message-time">{message.time}</div>
+                    <div key={index} className={message.from === socket.id ? `${styles.messageRight}` : `${styles.messageLeft}`}>
+                        <div className={styles.messageText}>{message.text}</div>
+                        <div className={styles.messageTime}>{message.time}</div>
                     </div>
                 ))}
             </div>
-            <div className="input-container">
+            <div className={styles.inputContainer}>
                 <input
                     type="text"
                     value={messageInput}
