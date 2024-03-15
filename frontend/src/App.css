@@ -1,0 +1,130 @@
+.main-container {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1f2524;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    height: 10vh;
+    background: #075e54;
+    color: #ffff;
+    padding: 0 2.5rem;
+}
+
+.link-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.hyper-link {
+    color: #EFEAE5;
+    font-size: 1.4rem;
+}
+
+.chat-container {
+    height: 80vh;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-container {
+    scrollbar-width: none;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message-right {
+    background-color: #357C44;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    margin-left: auto;
+    width: fit-content;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.3rem;
+}
+
+.message-left {
+    background-color: #47A55B;
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.3rem;
+}
+
+.message-text {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.message-time {
+    color: #fff;
+    font-size: 0.6rem;
+}
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+    height: 7vh;
+    padding: 0 0.5rem;
+}
+
+.input-container input[type="text"] {
+    width: calc(100% - 70px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+
+.input-container button {
+    padding: 0.5rem 3rem;
+    border: none;
+    background-color: #153732;
+    border: 2px solid #EFEAE5;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 2rem;
+    margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        justify-content: center
+    }
+
+    .link-section {
+        display: none;
+    }
+
+    .input-container {
+        gap: unset;
+    }
+
+    .input-container button {
+        padding: 0.5rem;
+    }
+}
